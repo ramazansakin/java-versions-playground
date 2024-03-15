@@ -8,13 +8,13 @@ This repository contains exercises and sample code to practice various Java feat
 
 ## Java 8 Features
 
-### Functional Interfaces
-### Lambda Expressions
-### Method References
-### Stream API
-### Optional
-### CompletableFuture
-### Concurrency Enhancement by Steam API
+- Functional Interfaces
+- Lambda Expressions
+- Method References
+- Stream API
+- Optional
+- CompletableFuture
+- Concurrency Enhancement by Steam API
 
 
 
