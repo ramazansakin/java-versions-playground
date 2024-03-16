@@ -1,0 +1,97 @@
+
+b	java:S112}"FDefine and throw a dedicated exception instead of using a generic one.(ÌÂ Ö8˜×Ëàã1
+¢
+java:S1192)"„Define a constant instead of duplicating this literal "-------------------------------------------------------------------" 9 times.(×¸†¨8™×Ëàã1
+J
+java:S1604"(Make this anonymous inner class a lambda(¼¸Îşÿÿÿÿÿ8™×Ëàã1
+W
+java:S1854":Remove this useless assignment to local variable "adder3".(·ñ¸š8®×Ëàã1
+V
+java:S1854":Remove this useless assignment to local variable "adder2".(ô¨K8®×Ëàã1
+U
+java:S1854;"8Remove this useless assignment to local variable "foo1".(ñÒ±8®×Ëàã1
+b
+java:S1854/"@Remove this useless assignment to local variable "substructor2".(øˆ«™ÿÿÿÿÿ8®×Ëàã1
+]
+java:S1854,"@Remove this useless assignment to local variable "substructor1".(³«½´8®×Ëàã1
+G
+java:S1481"+Remove this unused "adder2" local variable.(ô¨K8°×Ëàã1
+H
+java:S1481"+Remove this unused "adder3" local variable.(·ñ¸š8°×Ëàã1
+L	java:S106!"+Replace this use of System.out by a logger.(æ–™şÿÿÿÿ8±×Ëàã1
+L	java:S106""+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8±×Ëàã1
+G	java:S106%"+Replace this use of System.out by a logger.(âÉß§8±×Ëàã1
+L	java:S106'"+Replace this use of System.out by a logger.(‚Ìñçıÿÿÿÿ8±×Ëàã1
+G	java:S106)"+Replace this use of System.out by a logger.(×¸†¨8±×Ëàã1
+N
+java:S1481,"1Remove this unused "substructor1" local variable.(³«½´8²×Ëàã1
+S
+java:S1481/"1Remove this unused "substructor2" local variable.(øˆ«™ÿÿÿÿÿ8²×Ëàã1
+L	java:S1067"+Replace this use of System.out by a logger.(Á–·Õıÿÿÿÿ8²×Ëàã1
+G	java:S1069"+Replace this use of System.out by a logger.(×¸†¨8²×Ëàã1
+s
+java:S4276;"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(ñÒ±8²×Ëàã1
+p
+java:S1602;"SRemove useless curly braces around statement and then remove useless return keyword(ñÒ±8²×Ëàã1
+F
+java:S1481;")Remove this unused "foo1" local variable.(ñÒ±8³×Ëàã1
+y
+java:S4276?"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(Ê™˜8³×Ëàã1
+G	java:S106B"+Replace this use of System.out by a logger.(øèä8³×Ëàã1
+y
+java:S4276E"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(Ã‚ô8³×Ëàã1
+L	java:S106H"+Replace this use of System.out by a logger.(ì¶¹øÿÿÿÿ8³×Ëàã1
+G	java:S106J"+Replace this use of System.out by a logger.(×¸†¨8´×Ëàã1
+~
+java:S4276L"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(¥„ãüÿÿÿÿ8´×Ëàã1
+y
+java:S4276M"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(øşÑË8´×Ëàã1
+L	java:S106P"+Replace this use of System.out by a logger.(šíâñúÿÿÿÿ8´×Ëàã1
+G	java:S106S"+Replace this use of System.out by a logger.(Ûƒã¡8´×Ëàã1
+G	java:S106U"+Replace this use of System.out by a logger.(×¸†¨8´×Ëàã1
+L	java:S106f"+Replace this use of System.out by a logger.(Ã›¤øÿÿÿÿ8µ×Ëàã1
+L	java:S106k"+Replace this use of System.out by a logger.(Ã›¤øÿÿÿÿ8µ×Ëàã1
+G	java:S106m"+Replace this use of System.out by a logger.(×¸†¨8µ×Ëàã1
+L	java:S106p"+Replace this use of System.out by a logger.(¹²£üÿÿÿÿ8¶×Ëàã1
+X	java:S125u"<This block of commented-out lines of code should be removed.(€è¯8¶×Ëàã1
+G	java:S106y"+Replace this use of System.out by a logger.(×¸†¨8¶×Ëàã1
+H	java:S106ƒ"+Replace this use of System.out by a logger.(½Š‡î8·×Ëàã1
+H	java:S106…"+Replace this use of System.out by a logger.(×¸†¨8·×Ëàã1
+u
+java:S4276Š"RRefactor this code to use the more specialised Functional Interface 'IntPredicate'(Ô¸şÿşÿÿÿÿ8·×Ëàã1
+u
+java:S4276"RRefactor this code to use the more specialised Functional Interface 'IntPredicate'(¯Š”úÿÿÿÿ8¹×Ëàã1
+M	java:S106"+Replace this use of System.out by a logger.(ËÒëÒúÿÿÿÿ8¸×Ëàã1
+M	java:S106"+Replace this use of System.out by a logger.(‡òåÊşÿÿÿÿ8¸×Ëàã1
+H	java:S106‘"+Replace this use of System.out by a logger.(›îå8¸×Ëàã1
+H	java:S106”"+Replace this use of System.out by a logger.(×¸†¨8½×Ëàã1
+Y	java:S125–"<This block of commented-out lines of code should be removed.(†‡çÄ8ØÏş„ä1
+H	java:S106©"+Replace this use of System.out by a logger.(×¸†¨8©ó„ä1
+Y	java:S125±"<This block of commented-out lines of code should be removed.(à™Í­8¸×Ëàã1
+u
+java:S4276À"RRefactor this code to use the more specialised Functional Interface 'IntPredicate'(Ô¸şÿşÿÿÿÿ8õ…Íàã1
+z
+java:S4276Ê"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(ï†¯À8º×Ëàã1
+t
+java:S4276Ì"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(ÍÜò‘8º×Ëàã1
+^	java:S125Ë"<This block of commented-out lines of code should be removed.(Ç¤ôøÿÿÿÿ8º×Ëàã1
+y
+java:S4276Ñ"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(ÊµÛğıÿÿÿÿ8»×Ëàã1
+
+java:S4276Ñ"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(ÊµÛğıÿÿÿÿ8»×Ëàã1
+y
+java:S4276Ô"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(»ÖµŞùÿÿÿÿ8»×Ëàã1
+Y	java:S125Ò"<This block of commented-out lines of code should be removed.(²±è8»×Ëàã1
+t
+java:S4276Ù"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(³‚³´8¼×Ëàã1
+z
+java:S4276Ù"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(³‚³´8¼×Ëàã1
+y
+java:S4276Ü"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(›Ù»çüÿÿÿÿ8¼×Ëàã1
+Y	java:S125Ú"<This block of commented-out lines of code should be removed.(²±è8¼×Ëàã1
+M	java:S106ù"+Replace this use of System.out by a logger.(¾ŠåÁúÿÿÿÿ8©ó„ä1
+M	java:S106…"+Replace this use of System.err by a logger.(ğ›“Şøÿÿÿÿ8¾×Ëàã1
+H
+java:S1181˜"%Catch Exception instead of Throwable.(‡˜ÚÚøÿÿÿÿ8úÜ£…ä1
+M	java:S106—"+Replace this use of System.out by a logger.(òşÚúøÿÿÿÿ8Ÿ’ø„ä1
+H	java:S106™"+Replace this use of System.out by a logger.(äìÎÆ8Ÿ’ø„ä1

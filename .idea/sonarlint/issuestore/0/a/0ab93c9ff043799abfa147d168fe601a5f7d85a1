@@ -1,0 +1,15 @@
+
+r	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ãü”ÿÿÿÿÿ8‹»ºàã1
+a
+java:S1854)"?Remove this useless assignment to local variable "integerList".(öÉöêıÿÿÿÿ8•»ºàã1
+y
+java:S4276%"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(Æıõ§8–»ºàã1
+t
+java:S6204)"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(öÉöêıÿÿÿÿ8—»ºàã1
+R
+java:S1481)"0Remove this unused "integerList" local variable.(öÉöêıÿÿÿÿ8˜»ºàã1
+o
+java:S6204."RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8˜»ºàã1
+G	java:S106:"+Replace this use of System.out by a logger.(òÔÇÍ8š»ºàã1
+F	java:S106;"+Replace this use of System.out by a logger.(Ûğ²B8ëÀàã1
+G	java:S106<"+Replace this use of System.out by a logger.(òÔÇÍ8İ…Áàã1

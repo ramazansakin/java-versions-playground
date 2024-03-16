@@ -1,0 +1,27 @@
+
+b	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(ú®öÿ8§™å„ä1
+¢
+java:S11921"„Define a constant instead of duplicating this literal "-------------------------------------------------------------------" 5 times.(×¸†¨8§™å„ä1
+{
+java:S2142#"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8¯™å„ä1
+{
+java:S2142-"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8°™å„ä1
+L	java:S106,"+Replace this use of System.out by a logger.(òşÚúøÿÿÿÿ8°™å„ä1
+G	java:S1061"+Replace this use of System.out by a logger.(×¸†¨8°™å„ä1
+F	java:S106:"+Replace this use of System.out by a logger.(ÂìÜh8²™å„ä1
+G	java:S106>"+Replace this use of System.out by a logger.(×¸†¨8²™å„ä1
+x
+java:S4276H"\Refactor this code to use the more specialised Functional Interface 'BinaryOperator<String>'(ú’8²™å„ä1
+G	java:S106O"+Replace this use of System.out by a logger.(¤ßúû8²™å„ä1
+X	java:S125K"<This block of commented-out lines of code should be removed.(¨Æªƒ8²™å„ä1
+]	java:S125N"<This block of commented-out lines of code should be removed.(›à“çùÿÿÿÿ8²™å„ä1
+G	java:S106Q"+Replace this use of System.out by a logger.(×¸†¨8³™å„ä1
+b
+java:S1612V"@Replace this lambda with method reference 'String::toUpperCase'.(»‚Í“øÿÿÿÿ8´™å„ä1
+L	java:S106Y"+Replace this use of System.out by a logger.(ƒá×Ìûÿÿÿÿ8´™å„ä1
+G	java:S106["+Replace this use of System.out by a logger.(×¸†¨8µ™å„ä1
+{
+java:S2142b"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8µ™å„ä1
+G	java:S106l"+Replace this use of System.out by a logger.(Úã©€8¶™å„ä1
+L	java:S106n"+Replace this use of System.out by a logger.(òşÚúøÿÿÿÿ8¶™å„ä1
+G	java:S106r"+Replace this use of System.out by a logger.(×¸†¨8¶™å„ä1

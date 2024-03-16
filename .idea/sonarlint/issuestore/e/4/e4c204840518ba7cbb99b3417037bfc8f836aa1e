@@ -1,0 +1,51 @@
+
+k
+java:S1192"IDefine a constant instead of duplicating this literal "New York" 4 times.(Ó¬ÑØÿÿÿÿÿ8ñß„ä1
+£
+java:S11920"…Define a constant instead of duplicating this literal "-------------------------------------------------------------------" 10 times.(×¸†¨8òß„ä1
+n
+java:S1192"LDefine a constant instead of duplicating this literal "Los Angeles" 5 times.(¬àÀÒüÿÿÿÿ8òß„ä1
+e
+java:S1854"BRemove this useless assignment to local variable "distinctCities".(úªÑàıÿÿÿÿ8ß„ä1
+`
+java:S1854Y"DRemove this useless assignment to local variable "averageAgeByCity".(ÃÒµ8ß„ä1
+G	java:S106+"+Replace this use of System.out by a logger.(œ•é‹8…ß„ä1
+G	java:S1060"+Replace this use of System.out by a logger.(×¸†¨8…ß„ä1
+X	java:S125."<This block of commented-out lines of code should be removed.(Ùßü½8…ß„ä1
+L	java:S1064"+Replace this use of System.out by a logger.(ŸØ…Üøÿÿÿÿ8…ß„ä1
+G	java:S1066"+Replace this use of System.out by a logger.(×¸†¨8…ß„ä1
+F	java:S106:"+Replace this use of System.out by a logger.(ÔŒ´8†ß„ä1
+G	java:S106H"+Replace this use of System.out by a logger.(×¸†¨8†ß„ä1
+]	java:S125F"<This block of commented-out lines of code should be removed.(¦ŸÔÉúÿÿÿÿ8†ß„ä1
+s
+java:S3457L"Q%n should be used in place of \n to produce the platform-specific line separator.(’¸´¿ıÿÿÿÿ8‡ß„ä1
+L	java:S106L"+Replace this use of System.out by a logger.(’¸´¿ıÿÿÿÿ8‡ß„ä1
+G	java:S106O"+Replace this use of System.out by a logger.(×¸†¨8‡ß„ä1
+s
+java:S3457T"Q%n should be used in place of \n to produce the platform-specific line separator.(—’š©øÿÿÿÿ8ˆß„ä1
+L	java:S106T"+Replace this use of System.out by a logger.(—’š©øÿÿÿÿ8ˆß„ä1
+Q
+java:S1481Y"5Remove this unused "averageAgeByCity" local variable.(ÃÒµ8ˆß„ä1
+G	java:S106]"+Replace this use of System.out by a logger.(×¸†¨8ˆß„ä1
+s
+java:S3457g"Q%n should be used in place of \n to produce the platform-specific line separator.(Æ½¤‚şÿÿÿÿ8‰ß„ä1
+L	java:S106g"+Replace this use of System.out by a logger.(Æ½¤‚şÿÿÿÿ8‰ß„ä1
+G	java:S106i"+Replace this use of System.out by a logger.(×¸†¨8‰ß„ä1
+t
+java:S6204l"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(áÏÈèÿÿÿÿÿ8‰ß„ä1
+G	java:S106m"+Replace this use of System.out by a logger.(½²õ8‰ß„ä1
+G	java:S106o"+Replace this use of System.out by a logger.(×¸†¨8‰ß„ä1
+G	java:S106}"+Replace this use of System.out by a logger.(ğÁÓÿ8Šß„ä1
+G	java:S106~"+Replace this use of System.out by a logger.(Ö¶ñ¶8Šß„ä1
+M	java:S106€"+Replace this use of System.out by a logger.(˜’¡êûÿÿÿÿ8Šß„ä1
+M	java:S106"+Replace this use of System.out by a logger.(Æé›õùÿÿÿÿ8Šß„ä1
+H	java:S106„"+Replace this use of System.out by a logger.(×¸†¨8Šß„ä1
+H	java:S106‹"+Replace this use of System.out by a logger.(ûÂÿÎ8‹ß„ä1
+H	java:S106’"+Replace this use of System.out by a logger.(×¸†¨8‹ß„ä1
+Y	java:S125"<This block of commented-out lines of code should be removed.(½÷¤´8‹ß„ä1
+p
+java:S6204š"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8‹ß„ä1
+V
+java:S1481"3Remove this unused "distinctCities" local variable.(úªÑàıÿÿÿÿ8Œß„ä1
+G	java:S106¨"+Replace this use of System.out by a logger.(“¼­8Œß„ä1
+H	java:S106«"+Replace this use of System.out by a logger.(×¸†¨8ß„ä1

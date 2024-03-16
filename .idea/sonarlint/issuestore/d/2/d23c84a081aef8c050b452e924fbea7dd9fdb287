@@ -1,0 +1,6 @@
+
+e
+java:S2095"HUse try-with-resources or close this "HttpClient" in a "finally" clause.(¯õö´8Éœ§ˆä1
+G	java:S106'"+Replace this use of System.out by a logger.(ýƒíÙ8öËžˆä1
+L	java:S106("+Replace this use of System.out by a logger.(†–£„ýÿÿÿÿ8÷Ëžˆä1
+L	java:S106-"+Replace this use of System.err by a logger.(Ê¹ê¸ýÿÿÿÿ8÷Ëžˆä1
