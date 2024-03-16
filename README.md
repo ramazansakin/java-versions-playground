@@ -2,10 +2,6 @@
 
 This repository contains exercises and sample code to practice various Java features, including Java 8, Java 9, and beyond. Each section provides descriptions of the features along with sample code and exercises to help you learn and master them.
 
-## Table of Contents
-
-- [Java 8 Features](#java8)
-
 ## Java 8 Features
 
 - Functional Interfaces
@@ -15,6 +11,14 @@ This repository contains exercises and sample code to practice various Java feat
 - Optional
 - CompletableFuture
 - Concurrency Enhancement by Steam API
+- Some other improvements
 
 
+## Java 9 Features
+
+- Modularity - Jigsaw
+- Private Method usage in Interface
+- Stream API Enhancements
+- Process API Enhancements
+- Some other improvements
 
