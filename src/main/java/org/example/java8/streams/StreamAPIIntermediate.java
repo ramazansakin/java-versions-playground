@@ -9,10 +9,19 @@ class Person implements Comparable<Person> {
     private int age;
     private String city;
 
+    private List<String> hobbies;
+
     public Person(String name, int age, String city) {
         this.name = name;
         this.age = age;
         this.city = city;
+    }
+
+    public Person(String name, int age, String city, List<String> hobbies) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+        this.hobbies = hobbies;
     }
 
     public String getName() {
@@ -25,6 +34,10 @@ class Person implements Comparable<Person> {
 
     public String getCity() {
         return city;
+    }
+
+    public List<String> getHobbies() {
+        return hobbies;
     }
 
     @Override
