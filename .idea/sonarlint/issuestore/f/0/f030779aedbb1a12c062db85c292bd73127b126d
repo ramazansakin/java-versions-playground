@@ -1,17 +1,0 @@
-
-j
-java:S2184	"HCast one of the operands of this multiplication operation to a "double".(èæ¹¦úÿÿÿÿ8”Ğİã1
-c
-java:S2184	"ACast one of the operands of this division operation to a "float".(èæ¹¦úÿÿÿÿ8”Ğİã1
-b
-java:S1854	"@Remove this useless assignment to local variable "testFunction".(èæ¹¦úÿÿÿÿ8‘”Ğİã1
-x
-java:S4276	"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(èæ¹¦úÿÿÿÿ8’”Ğİã1
-S
-java:S1481	"1Remove this unused "testFunction" local variable.(èæ¹¦úÿÿÿÿ8“”Ğİã1
-~
-java:S4276"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(¹âÛúûÿÿÿÿ8“”Ğİã1
-G	java:S106"+Replace this use of System.out by a logger.(áÈàÚ8””Ğİã1
-L	java:S106"+Replace this use of System.out by a logger.(˜ã«˜øÿÿÿÿ8””Ğİã1
-s
-java:S4276"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(”Í8£‘Óİã1

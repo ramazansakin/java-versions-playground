@@ -1,35 +1,0 @@
-
-Q
-java:S3740"/Provide the parametrized type for this generic.(ψ§£ÿÿÿÿÿ8Υιέγ1
-j
-java:S2184
-"HCast one of the operands of this multiplication operation to a "double".(θζΉ¦ϊÿÿÿÿ8Ψιέγ1
-c
-java:S2184
-"ACast one of the operands of this division operation to a "float".(θζΉ¦ϊÿÿÿÿ8Ψιέγ1
-d
-java:S3655"HCall "temp.isPresent()" or "!temp.isEmpty()" before accessing the value.(°ΠΛ8ÿ΄αγ1
-b
-java:S1854
-"@Remove this useless assignment to local variable "testFunction".(θζΉ¦ϊÿÿÿÿ8βιέγ1
-x
-java:S4276
-"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(θζΉ¦ϊÿÿÿÿ8βιέγ1
-S
-java:S1481
-"1Remove this unused "testFunction" local variable.(θζΉ¦ϊÿÿÿÿ8γιέγ1
-~
-java:S4276"\Refactor this code to use the more specialised Functional Interface 'UnaryOperator<Integer>'(ΉβΫϊϋÿÿÿÿ8διέγ1
-G	java:S106"+Replace this use of System.out by a logger.(ωωªΚ8διέγ1
-L	java:S106"+Replace this use of System.out by a logger.(ΗΜ—ύÿÿÿÿ8διέγ1
-G	java:S106"+Replace this use of System.out by a logger.(ΧΈ†¨8ζιέγ1
-x
-java:S3923"[Remove this conditional structure or edit its code blocks so that they're not all the same.(³±σµ8ιιέγ1
-F	java:S106"+Replace this use of System.out by a logger.(°ΠΛ8κιέγ1
-F	java:S106"+Replace this use of System.out by a logger.(°ΠΛ8μιέγ1
-G	java:S106""+Replace this use of System.out by a logger.(ΧΈ†¨8ÿ…αγ1
-L	java:S106("+Replace this use of System.out by a logger.(Ξπάιώÿÿÿÿ8ÿ…αγ1
-G	java:S106)"+Replace this use of System.out by a logger.(όΚÒ―8ÿ…αγ1
-G	java:S106*"+Replace this use of System.out by a logger.(ΕΏΜΊ8€†αγ1
-s
-java:S42761"VRefactor this code to use the more specialised Functional Interface 'IntUnaryOperator'(”Ν8πιέγ1

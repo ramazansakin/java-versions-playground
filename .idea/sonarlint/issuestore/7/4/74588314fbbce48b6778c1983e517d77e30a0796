@@ -1,11 +1,0 @@
-
-W
-java:S1854":Remove this useless assignment to local variable "person".(צƒאז8ו¶’ˆה1
-G	java:S106"+Replace this use of System.out by a logger.(¦׀•ֵ8ח¶’ˆה1
-G	java:S106"+Replace this use of System.out by a logger.(±¶‰‹8ח¶’ˆה1
-G	java:S106"+Replace this use of System.out by a logger.(Û‰ֳ¡8ח¶’ˆה1
-L	java:S106"+Replace this use of System.out by a logger.(ד¿¢װשÿÿÿÿ8ט¶’ˆה1
-H
-java:S1481"+Remove this unused "person" local variable.(צƒאז8ט¶’ˆה1
-E
-java:S1068""(Remove this unused "name" private field.(ֻ¥¼8י¶’ˆה1
