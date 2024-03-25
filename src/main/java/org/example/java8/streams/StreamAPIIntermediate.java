@@ -75,7 +75,7 @@ public class StreamAPIIntermediate {
         people.add(new Person("Bob", 30, "Los Angeles"));
         people.add(new Person("Alice", 25, "New York"));
         people.add(new Person("Charlie", 35, "Chicago"));
-        people.add(new Person("Daniel", 22, "Seattle"));
+        people.add(new Person("Daniel", 16, "Seattle"));
         people.add(new Person("Adam", 55, "Chicago"));
         people.add(new Person("Seth", 16, "San Francisco"));
         people.add(new Person("Kai", 34, "Seattle"));
@@ -90,7 +90,7 @@ public class StreamAPIIntermediate {
 
         // 2- Mapping: Create a list of strings containing only the names of all people in the list.
         List<String> peopleNames = people.stream().map(person -> person.getName()).toList();
-        peopleNames.forEach(System.out::println);
+        peopleNames.forEach(name -> System.out.println(name));
 
         System.out.println("-------------------------------------------------------------------");
 
@@ -111,7 +111,7 @@ public class StreamAPIIntermediate {
         Map<String, List<Person>> peopleByCity = people.stream().collect(Collectors.groupingBy(Person::getCity));
 //        System.out.println(peopleByCity);
 
-        // Tuple
+        // Tuple -> Map Entry
         peopleByCity.forEach((city, peopleList) -> {
             System.out.println("City: " + city);
             peopleList.forEach(person -> System.out.println("\t" + person));
@@ -128,7 +128,7 @@ public class StreamAPIIntermediate {
 
 
         // 6- Find: Find the first person in the list who is from "Los Angeles".
-        Optional<Person> person = people.stream().filter(person1 -> person1.getCity().equals("San Francisco")).findFirst();
+        Optional<Person> person = people.stream().filter(person1 -> person1.getCity().equals("Los Angeles")).findFirst();
 
         // Ternary if-else
         String personName = person.isPresent() ? person.get().getName() : "No person";
@@ -150,9 +150,9 @@ public class StreamAPIIntermediate {
 
         people.stream()
                 .limit(3) // Get the first 3
-                .peek(System.out::println) // Print them (optional)
+                .peek(System.out::println) // Print them
                 .skip(2) // Skip the next 2
-                .forEach(System.out::println); // Print the remaining
+                .forEach(System.out::println); // Print the remaining 1
 
 
         System.out.println("-------------------------------------------------------------------");
@@ -168,6 +168,36 @@ public class StreamAPIIntermediate {
 
         System.out.println("-------------------------------------------------------------------");
 
+        // Sorting by age in ascending order, then by name in alphabetical order desc (reverse order)
+        people.sort(
+                Comparator.comparingInt(Person::getAge)
+                        .thenComparing(Comparator.comparing(Person::getName).reversed())
+        );
+
+        // Displaying the sorted list
+        System.out.println("Sorted Persons:");
+        people.forEach(System.out::println);
+
+        System.out.println("-------------------------------------------------------------------");
+
+
+        // **
+        // 11- Group all the people with city, and map it to average age of each city
+        Map<String, Double> avgAgeByCity =
+                people.stream().collect(
+                        Collectors.groupingBy(
+                                Person::getCity,
+                                Collectors.averagingDouble(Person::getAge)    // List<Person> -> Double
+                        )
+                );
+
+        // Displaying total amount for each product
+        System.out.println("Average of age by city:");
+        avgAgeByCity.forEach((city, ageAvg) ->
+                System.out.println(city + ": " + ageAvg));
+
+        System.out.println("-------------------------------------------------------------------");
+
     }
 
 
@@ -179,6 +209,5 @@ public class StreamAPIIntermediate {
             return p1.getName().compareTo(p2.getName());
         }
     }
-
 
 }
