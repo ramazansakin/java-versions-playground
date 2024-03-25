@@ -11,8 +11,8 @@ public class LongestPalindromicSubstring {
 
 
     // 2.way - more efficient
-    //
-
+    // it can be dynamic programming approach or like below
+    // dynamic programming approach is efficient but its looking little bit more tricky :)
 
     public String longestPalindrome(String s) {
         int start = 0, end = 0;
@@ -34,6 +34,12 @@ public class LongestPalindromicSubstring {
             right++;
         }
         return right - left - 1;
+    }
+
+    public static void main(String[] args) {
+        LongestPalindromicSubstring solution = new LongestPalindromicSubstring();
+        String s = "babad";
+        System.out.println("Longest palindrome substring: " + solution.longestPalindrome(s)); // Output: "bab" or "aba"
     }
 
 }
