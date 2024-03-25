@@ -39,16 +39,15 @@ public class StreamAPIUp {
         // 1- Filtering with Multiple Conditions: Filter the list to find all people who are older than 25 years and live in either "New York" or "Los Angeles".
         List<Person> filteredPeople = people.stream().filter(person -> person.getAge() > 25 && (person.getCity().equals("New York") || person.getCity().equals("Los Angeles"))).toList();
 
+        // Enhanced for-loop
         for (Person person : filteredPeople) {
             System.out.println(person);
         }
 
-//        filteredPeople.forEach(System.out::println);
-
         System.out.println("-------------------------------------------------------------------");
 
         // 2- Mapping with Transformation: Create a list of strings containing the names of all people in uppercase.
-        List<String> upperNames = people.stream().map(Person::getName).map(name -> name.toUpperCase(Locale.ROOT)).toList();
+        List<String> upperNames = people.stream().map(person -> person.getName().toUpperCase(Locale.ROOT)).toList();
         upperNames.forEach(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
@@ -59,12 +58,12 @@ public class StreamAPIUp {
 
         // 3-2 Alternative
         // Sorting using Comparator
-        Comparator<Person> cityComparator = Comparator.comparing(Person::getCity);
-        Comparator<Person> ageComparator = Comparator.comparing(Person::getAge).reversed();
+        Comparator<Person> cityComparator = Comparator.comparing(Person::getCity);  // Default asc
+        Comparator<Person> ageComparatorDesc = Comparator.comparing(Person::getAge).reversed();
 
         // !!! If Collections used like below, the actual list ll be sorted!!!
         // Sort first by city in ascending order, then by age in descending order within each city
-        Collections.sort(people, cityComparator.thenComparing(ageComparator));
+        Collections.sort(people, cityComparator.thenComparing(ageComparatorDesc));
 
         // Print sorted list
 //        people.forEach(System.out::println);
