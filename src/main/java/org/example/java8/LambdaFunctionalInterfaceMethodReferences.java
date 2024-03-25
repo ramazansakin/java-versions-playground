@@ -190,27 +190,30 @@ public class LambdaFunctionalInterfaceMethodReferences {
     // Use the Predicate functional interface to create a method that takes a list of integers and returns a new list containing only the even numbers.
     public static List<Integer> filterEvenNumbers(List<Integer> numbers) {
         Predicate<Integer> isEven = num -> num % 2 == 0;
-        List<Integer> evenNumbers = new ArrayList<>();
-        for (Integer num : numbers) {
-            if (isEven.test(num)) {
-                evenNumbers.add(num);
-            }
-        }
+        // stream way
+        List<Integer> evenNumbers = numbers.stream().filter(isEven).toList();
+
+        // Old way
+//        for (Integer num : numbers) {
+//            if (isEven.test(num)) {
+//                evenNumbers.add(num);
+//            }
+//        }
         return evenNumbers;
     }
 
     public static int doubleFunction(Function<Integer, Integer> foo, Integer value) {
 //        return foo.apply(foo.apply(value));
-        Function<Integer, Integer> composedFunction = foo.andThen(foo);
-        return composedFunction.apply(value);
+        Function<Integer, Integer> thenFunction = foo.andThen(foo);
+        return thenFunction.apply(value);
     }
 
     // Method Overloading
     public static int doubleFunction(Function<Integer, Integer> f1, Function<Integer, Integer> f2, Integer value) {
 //        return f1.apply(f2.apply(value));
 
-        Function<Integer, Integer> composedFunc = f1.andThen(f2);
-        return composedFunc.apply(value);
+        Function<Integer, Integer> thenFunc = f1.andThen(f2);
+        return thenFunc.apply(value);
     }
 
 
