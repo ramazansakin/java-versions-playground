@@ -80,11 +80,16 @@ public class StreamAPIIntermediate {
         people.add(new Person("Seth", 16, "San Francisco"));
         people.add(new Person("Kai", 34, "Seattle"));
         people.add(new Person("David", 40, "San Francisco"));
-
+        people.add(new Person("Keith", 23, "Chicago"));
+        people.add(new Person("Furry", 16, "San Francisco"));
+        people.add(new Person("Santa", 34, "Seattle"));
+        people.add(new Person("Rei", 40, "Miami"));
 
         // 1- Filtering: Filter the list to find all people who are older than 30 years.
-        List<Person> list = people.stream().filter(person -> person.getAge() > 30).toList();
-        list.forEach(System.out::println);
+        List<Person> peopleOlderThan30 = people.stream().filter(person -> person.getAge() > 30).toList();
+        peopleOlderThan30.forEach((person) -> {
+            System.out.println(person);
+        });
 
         System.out.println("-------------------------------------------------------------------");
 
@@ -175,7 +180,7 @@ public class StreamAPIIntermediate {
         );
 
         // Displaying the sorted list
-        System.out.println("Sorted Persons:");
+        System.out.println("Sorted people:");
         people.forEach(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
@@ -194,7 +199,7 @@ public class StreamAPIIntermediate {
         // Displaying total amount for each product
         System.out.println("Average of age by city:");
         avgAgeByCity.forEach((city, ageAvg) ->
-                System.out.println(city + ": " + ageAvg));
+                System.out.printf("%s : %.2f\n", city, ageAvg));
 
         System.out.println("-------------------------------------------------------------------");
 
