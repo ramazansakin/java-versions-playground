@@ -2,6 +2,7 @@ package org.example.java8.streams;
 
 
 import java.util.StringJoiner;
+import java.util.function.IntBinaryOperator;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -38,8 +39,13 @@ public class StreamAPIBasics {
         System.out.println("-------------------------------------------------------------------");
 
         // Reduce Operation
+        IntBinaryOperator intAdditionOp = (left, right) -> {
+            return left + right;
+        };
+
         int sum = IntStream.rangeClosed(1, 10)
-                .reduce(0, Integer::sum);
+                .reduce(0, intAdditionOp);
+
         System.out.println("Sum of integers from 1 to 10: " + sum);
 
         System.out.println("-------------------------------------------------------------------");
@@ -48,7 +54,7 @@ public class StreamAPIBasics {
         Stream<Integer> stream1 = Stream.of(1, 2, 3);
         Stream<Integer> stream2 = Stream.of(4, 5, 6);
         Stream<Integer> combinedStream = Stream.concat(stream1, stream2);
-        System.out.println("Stream Combination");
+        System.out.println("Stream Combination : ");
         combinedStream.forEach(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
@@ -62,11 +68,10 @@ public class StreamAPIBasics {
 
         // Exception in thread "main" java.lang.IllegalStateException: stream has already been operated upon or closed
         // Create new one like above combinedStream2
-        combinedStream.map(Object::toString)
+        combinedStream2.map(Object::toString)
                 .forEach(joiner::add);
 
-        String result = joiner.toString();
-        System.out.println("Combined elements: " + result);
+        System.out.println("Combined elements: " + joiner.toString());
 
     }
 
