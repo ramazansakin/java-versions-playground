@@ -1,8 +1,10 @@
 package org.example.java8.streams;
 
 
+import java.util.Arrays;
 import java.util.StringJoiner;
 import java.util.function.IntBinaryOperator;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -72,7 +74,39 @@ public class StreamAPIBasics {
                 .forEach(joiner::add);
 
         System.out.println("Combined elements: " + joiner.toString());
+        System.out.println("-------------------------------------------------------------------");
 
+        // Streaming int array and mapping, filtering, collecting in anyway you want
+        // Sum of Even Numbers
+
+        int[] arr = {1, 2, 3, 4, 5, 6};
+        int sum2 = Arrays.stream(arr)
+                .filter(num -> num % 2 == 0)
+                .sum();
+        System.out.println("Sum -> " + sum2);
+        System.out.println("-------------------------------------------------------------------");
+
+        // Count Positive Numbers
+        int[] arr2 = {-2, 3, 0, 5, -1, 8};
+        long count = Arrays.stream(arr2)
+                .filter(num -> num > 0)
+                .count();
+        System.out.println("Count of positive numbers -> " + count);
+        System.out.println("-------------------------------------------------------------------");
+
+        // Concatenate Strings
+        String[] arr3 = {"Hello", " ", "World", "!"};
+        String concated = Arrays.stream(arr3)
+                .collect(Collectors.joining());
+
+        System.out.println("Concated Strings from " + Arrays.toString(arr3) + " -> " + concated);
+        System.out.println("-------------------------------------------------------------------");
+
+        // Concatenate numbers as one String
+        String concatedNumbers = Arrays.stream(arr2).mapToObj(String::valueOf).collect(Collectors.joining());
+
+        System.out.println("Concated Numbers from " + Arrays.toString(arr2) + " -> " + concatedNumbers);
+        System.out.println("-------------------------------------------------------------------");
     }
 
 }
