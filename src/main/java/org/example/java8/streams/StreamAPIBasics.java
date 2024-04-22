@@ -20,9 +20,10 @@ import java.util.stream.Stream;
 public class StreamAPIBasics {
 
     public static void main(String[] args) {
+
         // Basic Stream Creation
         IntStream.rangeClosed(1, 10)
-                .forEach(System.out::println);
+                .forEach((number) -> System.out.println(number));
 
         System.out.println("-------------------------------------------------------------------");
 
@@ -35,7 +36,7 @@ public class StreamAPIBasics {
 
         // Mapping with Stream
         IntStream.rangeClosed(1, 5)
-                .map(i -> i * i)
+                .map(i -> i * i)    // transformation
                 .forEach(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
@@ -83,6 +84,7 @@ public class StreamAPIBasics {
         int sum2 = Arrays.stream(arr)
                 .filter(num -> num % 2 == 0)
                 .sum();
+
         System.out.println("Sum -> " + sum2);
         System.out.println("-------------------------------------------------------------------");
 
@@ -91,6 +93,7 @@ public class StreamAPIBasics {
         long count = Arrays.stream(arr2)
                 .filter(num -> num > 0)
                 .count();
+
         System.out.println("Count of positive numbers -> " + count);
         System.out.println("-------------------------------------------------------------------");
 
@@ -99,13 +102,13 @@ public class StreamAPIBasics {
         String concated = Arrays.stream(arr3)
                 .collect(Collectors.joining());
 
-        System.out.println("Concated Strings from " + Arrays.toString(arr3) + " -> " + concated);
+        System.out.println("Concatenated Strings from " + Arrays.toString(arr3) + " -> " + concated);
         System.out.println("-------------------------------------------------------------------");
 
         // Concatenate numbers as one String
         String concatedNumbers = Arrays.stream(arr2).mapToObj(String::valueOf).collect(Collectors.joining());
 
-        System.out.println("Concated Numbers from " + Arrays.toString(arr2) + " -> " + concatedNumbers);
+        System.out.println("Concatenated Numbers from " + Arrays.toString(arr2) + " -> " + concatedNumbers);
         System.out.println("-------------------------------------------------------------------");
     }
 
