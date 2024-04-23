@@ -196,7 +196,6 @@ public class StreamAPIIntermediate {
                         )
                 );
 
-        // Displaying total amount for each product
         System.out.println("Average of age by city:");
         avgAgeByCity.forEach((city, ageAvg) ->
                 System.out.printf("%s : %.2f\n", city, ageAvg));
@@ -205,12 +204,11 @@ public class StreamAPIIntermediate {
 
     }
 
-
-    public static class PersonNameComparator implements Comparator<Person> {
+    static class PersonNameComparator implements Comparator<Person> {
 
         @Override
         public int compare(Person p1, Person p2) {
-            // Compare names using natural ordering (lexicographic order)
+            // Compare names using natural ordering
             return p1.getName().compareTo(p2.getName());
         }
     }
