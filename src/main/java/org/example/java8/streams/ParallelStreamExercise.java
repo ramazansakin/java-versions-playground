@@ -19,7 +19,7 @@ public class ParallelStreamExercise {
         long parallelDuration = endTime - startTime;
 
         System.out.println("Average Grade (Parallel): " + averageGradeParallel);
-        System.out.println("Time taken with parallel streams: " + parallelDuration / testNumber + " milliseconds");
+        System.out.println("Time taken for one item to process with parallel streams: " + parallelDuration / testNumber + " milliseconds");
 
         // Test performance with sequential streams
         startTime = System.nanoTime();
@@ -28,7 +28,7 @@ public class ParallelStreamExercise {
         long sequentialDuration = endTime - startTime;
 
         System.out.println("Average Grade (Sequential): " + averageGradeSequential);
-        System.out.println("Time taken with sequential streams: " + sequentialDuration / testNumber + " milliseconds");
+        System.out.println("Time taken for one item to process with sequential streams: " + sequentialDuration / testNumber + " milliseconds");
 
         // Compare the elapsed time
         if (parallelDuration < sequentialDuration) {
