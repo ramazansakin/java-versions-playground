@@ -50,7 +50,10 @@ public class ConcurrencyWithFunctionalInt {
         List<Integer> squares = numberSupplier.get()
                 .parallelStream()
                 .map(calculateSquare)
+                .peek(System.out::println)
                 .toList();
+
+//        squares.forEach(System.out::println);
 
         // Step 4: Create a Consumer to calculate the sum of squares
         Consumer<List<Integer>> sumCalculator = squareList -> {
