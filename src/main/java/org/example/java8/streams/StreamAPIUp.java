@@ -87,7 +87,7 @@ public class StreamAPIUp {
         // Calculate the average age of people in each city
         Map<String, Double> averageAgeByCity = people.stream()
                 .collect(Collectors.groupingBy(Person::getCity,
-                        Collectors.averagingInt(Person::getAge)));
+                        Collectors.averagingDouble(Person::getAge)));
 
         System.out.println("-------------------------------------------------------------------");
 
