@@ -113,14 +113,11 @@ public class StreamAPIIntermediate {
         System.out.println("-------------------------------------------------------------------");
 
         // 4- Grouping: Group the list of people by their city.
-        Map<String, List<Person>> peopleByCity = people.stream().collect(Collectors.groupingBy(Person::getCity));
+        Map<String, Long> peopleByCity = people.stream().collect(Collectors.groupingBy(Person::getCity, Collectors.counting()));
 //        System.out.println(peopleByCity);
 
         // Tuple -> Map Entry
-        peopleByCity.forEach((city, peopleList) -> {
-            System.out.println("City: " + city);
-            peopleList.forEach(person -> System.out.println("\t" + person));
-        });
+        peopleByCity.forEach((city, peopleSize) -> System.out.println("City: " + city + ", peopleSize: " + peopleSize));
 
         System.out.println("-------------------------------------------------------------------");
 
@@ -168,8 +165,8 @@ public class StreamAPIIntermediate {
 
 
         // 10- Any Match: Check if there is at least one person in the list from "Chicago".
-        boolean anyPersonFromChicage = people.stream().anyMatch(person1 -> person1.getCity().equals("Chicago"));
-        System.out.println("Is there anybody from Chicago : " + anyPersonFromChicage);
+        boolean anyPersonFromChicago = people.stream().anyMatch(person1 -> person1.getCity().equals("Chicago"));
+        System.out.println("Is there anybody from Chicago : " + anyPersonFromChicago);
 
         System.out.println("-------------------------------------------------------------------");
 
