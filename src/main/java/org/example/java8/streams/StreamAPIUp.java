@@ -63,7 +63,7 @@ public class StreamAPIUp {
 
         // !!! If Collections used like below, the actual list ll be sorted!!!
         // Sort first by city in ascending order, then by age in descending order within each city
-        Collections.sort(people, cityComparator.thenComparing(ageComparatorDesc));
+        people.sort(cityComparator.thenComparing(ageComparatorDesc));
 
         // Print sorted list
 //        people.forEach(System.out::println);
@@ -72,7 +72,8 @@ public class StreamAPIUp {
 
 
         // 4- Grouping and Counting: Group the list of people by their city, and then count the number of people in each city.
-        people.stream().collect(Collectors.groupingBy(Person::getCity)).forEach((city, peopleList) -> System.out.printf("%s -> %d\n", city, peopleList.size()));
+        people.stream().collect(Collectors.groupingBy(Person::getCity))
+                .forEach((city, peopleList) -> System.out.printf("%s -> %d\n", city, peopleList.size()));
 
 
         System.out.println("-------------------------------------------------------------------");
@@ -83,7 +84,7 @@ public class StreamAPIUp {
             System.out.printf("%s -> average age : %.2f\n", city, avg);
         });
 
-        // 5-2 Alternative
+        // 5-2 Alternative :
         // Calculate the average age of people in each city
         Map<String, Double> averageAgeByCity = people.stream()
                 .collect(Collectors.groupingBy(Person::getCity,
@@ -104,13 +105,13 @@ public class StreamAPIUp {
         System.out.println("-------------------------------------------------------------------");
 
         // 7- FlatMap Operation: Create a list of all unique cities where the people live.
-        List<String> allCities = people.stream().map(Person::getCity).distinct().collect(Collectors.toList());
+        List<String> allCities = people.stream().map(Person::getCity).distinct().toList();
         allCities.forEach(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
 
 
-        // 8- Partitioning: Partition the list of people into two groups: one containing people older than 30 years and the other containing people younger than or equal to 30 years.
+        // 8 : Partitioning: Partition the list of people into two groups: one containing people older than 30 years and the other containing people younger than or equal to 30 years.
         Predicate<Person> condition = person -> person.getAge() > 30;
         Map<Boolean, List<Person>> partitioning30 = people.stream().collect(
                 Collectors.partitioningBy(
@@ -121,19 +122,23 @@ public class StreamAPIUp {
         List<Person> olderPeople30 = partitioning30.get(true);
         List<Person> youngerOrEqualPeople30 = partitioning30.get(false);
 
-        System.out.println("The Older");
+        System.out.println("The Older partition: ");
         olderPeople30.forEach(System.out::println);
 
-        System.out.println("The Younger");
+        System.out.println("The Younger partition: ");
         youngerOrEqualPeople30.forEach(System.out::println);
 
 
         System.out.println("-------------------------------------------------------------------");
 
-        // 9- Reducing Operation: Find the person with the longest name in the list.
+        // 9 : Reducing Operation: Find the person with the longest name in the list.
         Person oldestPerson = people.stream().collect(
                 Collectors.maxBy(Comparator.comparing(Person::getAge))
         ).orElseThrow(() -> new RuntimeException("There is no person in the list!"));
+
+        // 9-2 : alternative
+        Person oldestPerson2 = people.stream().max(Comparator.comparing(Person::getAge))
+                .orElseThrow(() -> new RuntimeException("There is no person in the list!"));
 
         System.out.println("Oldest Person : " + oldestPerson);
 
@@ -150,7 +155,7 @@ public class StreamAPIUp {
         // Filter the list to find all people whose name contains the letter 'a'
         List<Person> filteredPeopleList = people.stream()
                 .filter(person -> person.getName().toLowerCase().contains("a"))
-                .collect(Collectors.toList());
+                .toList();
 
         // Count the number of distinct cities they live in
         int distinctCities = filteredPeopleList.stream()
@@ -166,9 +171,7 @@ public class StreamAPIUp {
 
         System.out.println("Related distinct city number : " + distinctCitiesByPeopleNamedStartingA);
 
-
         System.out.println("-------------------------------------------------------------------");
-
 
     }
 
