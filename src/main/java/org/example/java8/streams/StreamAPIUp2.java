@@ -30,14 +30,22 @@ public class StreamAPIUp2 {
         // Filtering and Mapping:
         // Write a lambda expression to filter the list of people above to include only those who are older than 30.
         // Map the filtered list to a list of strings containing only the names of the people.
-        List<String> peopleNamesUp30 = people.stream().filter(person -> person.getAge() > 30).map(person -> person.getName().toUpperCase()).toList();
+        List<String> peopleNamesUp30 = people.stream()
+                .filter(person -> person.getAge() > 30)
+                .map(person -> person.getName().toUpperCase())
+                .toList();
+
         peopleNamesUp30.forEach(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
         // Sorting and Grouping:
         // Sort the list of people by their age in descending order.
         // Group the sorted list by the city they live in, creating a Map<String, List<Person>> where the key is the city name.
-        Map<String, List<Person>> sortedPeopleByCityMap = people.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.groupingBy(Person::getCity));
+        Map<String, List<Person>> sortedPeopleByCityMap =
+                people.stream()
+                        .sorted(Comparator.comparing(Person::getAge))
+                        .collect(Collectors.groupingBy(Person::getCity));
+
         sortedPeopleByCityMap.forEach((city, peopleList) -> {
             System.out.println("City : " + city + " --> People : ");
             peopleList.forEach(System.out::println);
@@ -47,12 +55,19 @@ public class StreamAPIUp2 {
         // Aggregation and Reduction:
         // Find the average age of people in the list using streams and the Collectors.averagingInt method.
         // Find the oldest person in the list using the Collectors.maxBy method.
-        Double avgAge = people.stream().collect(Collectors.averagingInt(Person::getAge));
-        Person oldestPerson = people.stream().collect(Collectors.maxBy(Comparator.comparing(Person::getAge))).orElseThrow(() -> new RuntimeException("No person in list!"));
-        // "max" can be used directly instead of using "collect with maxBy"
-        Person oldestPerson2 = people.stream().max(Comparator.comparing(Person::getAge)).orElseThrow(() -> new RuntimeException("No person in list!"));
+        Double avgAge = people.stream()
+                .collect(Collectors.averagingDouble(Person::getAge));
 
-        System.out.println("Oldest person : " + oldestPerson + " --- average age : " + avgAge);
+        Person oldestPerson = people.stream()
+                .collect(Collectors.maxBy(Comparator.comparing(Person::getAge)))
+                .orElseThrow(() -> new RuntimeException("No person in the list!"));
+
+        // "max" can be used directly instead of using "collect with maxBy"
+        Person oldestPerson2 = people.stream()
+                .max(Comparator.comparing(Person::getAge))
+                .orElseThrow(() -> new RuntimeException("No person in the list!"));
+
+        System.out.println("Oldest person : " + oldestPerson + " --- Average age : " + avgAge);
 
 
         System.out.println("-------------------------------------------------------------------");
@@ -75,15 +90,16 @@ public class StreamAPIUp2 {
         // Use the Collectors.groupingBy method to group people by their age range (e.g., 0-20, 21-40, 41-60, 61+).
         //      Map each age range to a string describing the range (e.g., "0-20", "21-40", etc.).
         //      Collect the mapping into a Map<String, List<Person>>.
-        Map<String, List<Person>> peopleByAgeRange = people.stream().collect(Collectors.groupingBy(
-                person -> {
-                    int age = person.getAge();
-                    if (age <= 20) return "0-20";
-                    else if (age <= 40) return "21-40";
-                    else if (age <= 60) return "41-60";
-                    else return "61+";
-                }
-        ));
+        Map<String, List<Person>> peopleByAgeRange = people.stream()
+                .collect(Collectors.groupingBy(
+                        person -> {
+                            int age = person.getAge();
+                            if (age <= 20) return "0-20";
+                            else if (age <= 40) return "21-40";
+                            else if (age <= 60) return "41-60";
+                            else return "61+";
+                        }
+                ));
 
         peopleByAgeRange.forEach((ageRange, peopleList) -> {
             System.out.println("Age Range : " + ageRange + " --> People : ");
@@ -142,6 +158,7 @@ public class StreamAPIUp2 {
                 .filter(person -> person.getHobbies() != null)
                 .flatMap(person -> person.getHobbies().stream())
                 .collect(Collectors.toSet());
+
         allHobbies.forEach(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
