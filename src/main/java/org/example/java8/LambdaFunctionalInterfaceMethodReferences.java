@@ -1,6 +1,5 @@
 package org.example.java8;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
@@ -27,7 +26,7 @@ public class LambdaFunctionalInterfaceMethodReferences {
 
         int adderResult = adder.calculate(10, 4);
 
-        int adder3Result = adder.calculate(10, 4);
+        int adder3Result = adder3.calculate(10, 4);
 
         // String Interpolation
         System.out.printf("adder result : %s | adder3 result : %s", adderResult, adder3Result);
@@ -43,7 +42,7 @@ public class LambdaFunctionalInterfaceMethodReferences {
         // Subs by Lambda
         Calculator substructor1 = (a, b) -> a - b;
 
-        // Subs by custom method reference
+        // Subs by custom method reference by a static method
         Calculator substructor2 = LambdaFunctionalInterfaceMethodReferences::substruct;
 
 
@@ -203,9 +202,14 @@ public class LambdaFunctionalInterfaceMethodReferences {
     }
 
     public static int doubleFunction(Function<Integer, Integer> foo, Integer value) {
-//        return foo.apply(foo.apply(value));
-        Function<Integer, Integer> thenFunction = foo.andThen(foo);
-        return thenFunction.apply(value);
+        return doubleFunction(foo, foo, value);
+
+        // other possible impl - 1
+        //        return foo.apply(foo.apply(value));
+
+        // other possible impl - 2
+//        Function<Integer, Integer> thenFunction = foo.andThen(foo);
+//        return thenFunction.apply(value);
     }
 
     // Method Overloading
@@ -218,7 +222,7 @@ public class LambdaFunctionalInterfaceMethodReferences {
 
 
     public static int doubleFunctionCompose(Function<Integer, Integer> f1, Function<Integer, Integer> f2, Integer value) {
-//        return f1.apply(f2.apply(value));
+//        return f2.apply(f1.apply(value));
 
         Function<Integer, Integer> composedFunc = f1.compose(f2);
         return composedFunc.apply(value);
