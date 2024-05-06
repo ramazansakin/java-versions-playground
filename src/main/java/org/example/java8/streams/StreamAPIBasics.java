@@ -41,7 +41,7 @@ public class StreamAPIBasics {
 
         System.out.println("-------------------------------------------------------------------");
 
-        // Reduce Operation
+        // Addition function as Reduce operation lambda
         IntBinaryOperator intAdditionOp = (left, right) -> {
             return left + right;
         };
@@ -106,6 +106,7 @@ public class StreamAPIBasics {
         System.out.println("-------------------------------------------------------------------");
 
         // Concatenate numbers as one String
+        // Chaining of transformation
         String concatedNumbers = Arrays.stream(arr2).mapToObj(String::valueOf).collect(Collectors.joining());
 
         System.out.println("Concatenated Numbers from " + Arrays.toString(arr2) + " -> " + concatedNumbers);
