@@ -66,7 +66,7 @@ public class StreamAPIUp {
         people.sort(cityComparator.thenComparing(ageComparatorDesc));
 
         // Print sorted list
-//        people.forEach(System.out::println);
+        people.forEach(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
 
@@ -79,16 +79,22 @@ public class StreamAPIUp {
         System.out.println("-------------------------------------------------------------------");
 
         // 5- Aggregation with Mapping: Calculate the average age of people in each city.
-        people.stream().collect(Collectors.groupingBy(Person::getCity)).forEach((city, people1) -> {
-            double avg = people1.stream().mapToInt(Person::getAge).average().orElse(0.0);
-            System.out.printf("%s -> average age : %.2f\n", city, avg);
-        });
+        people.stream()
+                .collect(Collectors.groupingBy(Person::getCity))
+                .forEach((city, peopleList) -> {
+                            double avg = peopleList.stream().mapToInt(Person::getAge).average().orElse(0.0);
+                            System.out.printf("%s -> average age : %.2f\n", city, avg);
+                        }
+                );
 
         // 5-2 Alternative :
         // Calculate the average age of people in each city
         Map<String, Double> averageAgeByCity = people.stream()
-                .collect(Collectors.groupingBy(Person::getCity,
-                        Collectors.averagingDouble(Person::getAge)));
+                .collect(Collectors.groupingBy(
+                                Person::getCity,
+                                Collectors.averagingDouble(Person::getAge)
+                        )
+                );
 
         System.out.println("-------------------------------------------------------------------");
 
@@ -128,27 +134,23 @@ public class StreamAPIUp {
         System.out.println("The Younger partition: ");
         youngerOrEqualPeople30.forEach(System.out::println);
 
-
         System.out.println("-------------------------------------------------------------------");
 
         // 9 : Reducing Operation: Find the person with the longest name in the list.
-        Person oldestPerson = people.stream().collect(
-                Collectors.maxBy(Comparator.comparing(Person::getAge))
-        ).orElseThrow(() -> new RuntimeException("There is no person in the list!"));
+        Person oldestPerson = people.stream()
+                .collect(
+                        Collectors.maxBy(Comparator.comparing(Person::getAge)
+                        )
+                ).orElseThrow(() -> new RuntimeException("There is no person in the list!"));
 
         // 9-2 : alternative
-        Person oldestPerson2 = people.stream().max(Comparator.comparing(Person::getAge))
+        Person oldestPerson2 = people.stream()
+                .max(Comparator.comparing(Person::getAge))
                 .orElseThrow(() -> new RuntimeException("There is no person in the list!"));
 
         System.out.println("Oldest Person : " + oldestPerson);
 
-//        List<Person> emptyList = new ArrayList<>();
-//        emptyList.stream().collect(
-//                Collectors.maxBy(Comparator.comparing(Person::getAge))
-//        ).orElseThrow(() -> new RuntimeException("There is no person in the list!"));
-
         System.out.println("-------------------------------------------------------------------");
-
 
         // 10- Advanced Filtering: Filter the list to find all people whose name contains the letter 'a', and then count the number of distinct cities they live in.
 
