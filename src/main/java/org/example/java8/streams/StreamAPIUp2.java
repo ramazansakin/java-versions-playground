@@ -140,7 +140,7 @@ public class StreamAPIUp2 {
         BiPredicate<Person, String> combined = isLivingInCity.and(isStartingNameWith);
 
 
-        // Combine filters using Predicate.and
+        // Combine filters using && on one Predicate, the parameters can be defined in a separate isolated function
         Predicate<Person> combinedFilter2 = person ->
                 isStartingNameWith.test(person, "T") && isLivingInCity.test(person, "New York");
 
