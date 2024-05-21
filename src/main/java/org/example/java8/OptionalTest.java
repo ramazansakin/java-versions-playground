@@ -7,7 +7,8 @@ public class OptionalTest {
 
     public static void main(String[] args) {
 
-        Function<Integer, Integer> testFunction = x -> (int) ((5 * Math.tan(x) / Math.cos(30 * x) + 5) * Math.getExponent(x / 10));
+        Function<Integer, Integer> testFunction =
+                x -> (int) ((5 * Math.tan(x) / Math.cos(30 * x) + 5) * Math.getExponent(x / 10));
 
         Function<Integer, Integer> testF = x -> 2 * x + 1;
         int n = 5;
