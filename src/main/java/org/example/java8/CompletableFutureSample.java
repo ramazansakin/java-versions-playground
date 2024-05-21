@@ -27,7 +27,7 @@ public class CompletableFutureSample {
 
     public static void main(String[] args) {
 
-        //    1- Create a CompletableFuture: Create a CompletableFuture that completes with a result of "Hello, world!" after a short delay.
+        // 1- Create a CompletableFuture: Create a CompletableFuture that completes with a result of "Hello, world!" after a short delay.
         CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
             try {
                 // Simulate some processing time
@@ -48,7 +48,7 @@ public class CompletableFutureSample {
 
         System.out.println("-------------------------------------------------------------------");
 
-        //    2- Handle Exception: Create a CompletableFuture that completes exceptionally with a RuntimeException.
+        // 2- Handle Exception: Create a CompletableFuture that completes exceptionally with a RuntimeException.
         CompletableFuture<Void> future2 = CompletableFuture.runAsync(() -> {
             throw new RuntimeException("Something went wrong!");
         });
@@ -56,14 +56,14 @@ public class CompletableFutureSample {
         // Handle the exception and print the error message
         future2.exceptionally(ex -> {
             System.out.println("Exception occurred: " + ex.getMessage());
-            return null; // Return null to suppress the exception
-        }).join(); // Wait for the CompletableFuture to complete
+            return null;    // Return null to suppress the exception
+        }).join();          // Wait for the CompletableFuture to complete
 
         System.out.println("-------------------------------------------------------------------");
 
 
-        //    3- Combine CompletableFutures: Create two CompletableFutures, one that completes with a result of "Hello" and another
-        //    that completes with a result of "World", and then combine them to create a new CompletableFuture that completes with the concatenated string "Hello, World".
+        // 3- Combine CompletableFutures: Create two CompletableFutures, one that completes with a result of "Hello" and another
+        // that completes with a result of "World", and then combine them to create a new CompletableFuture that completes with the concatenated string "Hello, World".
         // Create two CompletableFutures that complete with "Hello" and "World" respectively
         CompletableFuture<String> futureA = CompletableFuture.supplyAsync(() -> "Hello");
         CompletableFuture<String> futureB = CompletableFuture.supplyAsync(() -> "World");
@@ -80,21 +80,21 @@ public class CompletableFutureSample {
 
         System.out.println("-------------------------------------------------------------------");
 
-        //    4- Chain CompletableFutures: Create a chain of CompletableFutures where each stage processes the result of the previous stage.
-        //    For example, one stage could convert a string to uppercase, and another stage could append a suffix.
+        // 4- Chain CompletableFutures: Create a chain of CompletableFutures where each stage processes the result of the previous stage.
+        // For example, one stage could convert a string to uppercase, and another stage could append a suffix.
         CompletableFuture<String> future3 = CompletableFuture.supplyAsync(() -> "hello")
-                .thenApply(s -> s.toUpperCase())
+                .thenApply(String::toUpperCase)
                 .thenApply(s -> s + ", world");
 
         future3.thenAccept(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
 
-        //    5- Handle Timeout: Create a CompletableFuture that completes exceptionally with a TimeoutException if it takes longer than a specified duration to complete.
+        // 5- Handle Timeout: Create a CompletableFuture that completes exceptionally with a TimeoutException if it takes longer than a specified duration to complete.
         CompletableFuture<String> future5 = CompletableFuture.supplyAsync(() -> {
             try {
                 // Simulate a long-running task
-                Thread.sleep(2000);
+                Thread.sleep(3100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
