@@ -2,6 +2,9 @@ package org.example.playground;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.atomic.DoubleAccumulator;
+import java.util.function.DoubleBinaryOperator;
+
 
 public class TestModel {
 
@@ -21,6 +24,16 @@ public class TestModel {
 
         // Below line ll not work if related model class didn't implement Comparable interface !
         // Collections.sort(testModelList);
+
+        DoubleAccumulator test = new DoubleAccumulator(new DoubleBinaryOperator() {
+            @Override
+            public double applyAsDouble(double left, double right) {
+                return left + right;
+            }
+        }, 0);
+
+        // Lambda version impl of above sample DoubleAccumulator
+        DoubleAccumulator test2 = new DoubleAccumulator((left, right) -> left + right, 0);
 
     }
 
