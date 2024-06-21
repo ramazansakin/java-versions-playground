@@ -246,7 +246,7 @@ public class LambdaFunctionalInterfaceMethodReferences {
     }
 
     // **
-    // Optional to use @FunctionalInterface, its a "Marker annotation"
+    // Optional to use @FunctionalInterface, its a "Marker annotation" but its highly advisable to use
 //    @FunctionalInterface
     public static void executeAction(MyFunctionalInterface action) {
         action.performAction();
@@ -287,8 +287,6 @@ public class LambdaFunctionalInterfaceMethodReferences {
         } catch (Throwable e) {
             System.out.println("Error: " + e.getMessage());
         }
-
     }
-
 
 }
