@@ -199,6 +199,19 @@ public class StreamAPIIntermediate {
 
         System.out.println("-------------------------------------------------------------------");
 
+        // **
+        // 12- Partition all the people depending on the condition which selects the person names that starts with "A"
+        Map<Boolean, List<Person>> peopleNameStartsWith = people.stream().collect(Collectors.partitioningBy(o -> o.getName().startsWith("A")));
+
+        List<Person> people1 = peopleNameStartsWith.get(true);
+        List<Person> people2 = peopleNameStartsWith.get(false);
+
+        people1.forEach(System.out::println);
+        System.out.println("---------");
+        people2.forEach(System.out::println);
+
+        System.out.println("-------------------------------------------------------------------");
+
     }
 
     static class PersonNameComparator implements Comparator<Person> {
