@@ -22,7 +22,7 @@ public class StreamAPIBasics {
     public static void main(String[] args) {
 
         // Basic Stream Creation
-        IntStream.rangeClosed(1, 10)
+        IntStream.range(1, 10)
                 .forEach((number) -> System.out.println(number));
 
         System.out.println("-------------------------------------------------------------------");
@@ -99,17 +99,20 @@ public class StreamAPIBasics {
 
         // Concatenate Strings
         String[] arr3 = {"Hello", " ", "World", "!"};
-        String concated = Arrays.stream(arr3)
+        String concatenated = Arrays.stream(arr3)
                 .collect(Collectors.joining());
 
-        System.out.println("Concatenated Strings from " + Arrays.toString(arr3) + " -> " + concated);
+        System.out.println("Concatenated Strings from " + Arrays.toString(arr3) + " -> " + concatenated);
         System.out.println("-------------------------------------------------------------------");
 
         // Concatenate numbers as one String
         // Chaining of transformation
-        String concatedNumbers = Arrays.stream(arr2).mapToObj(String::valueOf).collect(Collectors.joining());
+        String concatenatedNumbers =
+                Arrays.stream(arr2)
+                        .mapToObj(String::valueOf)
+                        .collect(Collectors.joining());
 
-        System.out.println("Concatenated Numbers from " + Arrays.toString(arr2) + " -> " + concatedNumbers);
+        System.out.println("Concatenated Numbers from " + Arrays.toString(arr2) + " -> " + concatenatedNumbers);
         System.out.println("-------------------------------------------------------------------");
     }
 
