@@ -4,6 +4,10 @@ import java.io.*;
 
 public class CustomSerialization {
 
+    private CustomSerialization() {
+        // Do nothing to prevent warnings
+    }
+
     public static class CustomSerializableClass implements Serializable {
         private static final long serialVersionUID = 1L;
 
@@ -61,4 +65,5 @@ public class CustomSerialization {
         }
 
     }
+
 }
