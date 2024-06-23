@@ -38,7 +38,12 @@ public class StreamAPIUp {
         people.add(new Person("Jane", 29, "Los Angeles"));
 
         // 1- Filtering with Multiple Conditions: Filter the list to find all people who are older than 25 years and live in either "New York" or "Los Angeles".
-        List<Person> filteredPeople = people.stream().filter(person -> person.getAge() > 25 && (person.getCity().equals("New York") || person.getCity().equals("Los Angeles"))).toList();
+        List<Person> filteredPeople =
+                people.stream()
+                        .filter(
+                                person -> person.getAge() > 25 &&
+                                        (person.getCity().equals("New York") || person.getCity().equals("Los Angeles")))
+                        .toList();
 
         // Enhanced for-loop
         for (Person person : filteredPeople) {
@@ -48,7 +53,11 @@ public class StreamAPIUp {
         System.out.println("-------------------------------------------------------------------");
 
         // 2- Mapping with Transformation: Create a list of strings containing the names of all people in uppercase.
-        List<String> upperNames = people.stream().map(person -> person.getName().toUpperCase(Locale.ROOT)).toList();
+        List<String> upperNames =
+                people.stream()
+                        .map(person -> person.getName().toUpperCase(Locale.ROOT))
+                        .toList();
+
         upperNames.forEach(System.out::println);
 
         System.out.println("-------------------------------------------------------------------");
@@ -110,6 +119,18 @@ public class StreamAPIUp {
 
         oldestPersonByCity.forEach((city, person) -> System.out.printf("%s -> oldest person : %s\n", city, person.get()));
 
+        // 6.2- All people names for each city
+        people.stream().collect(
+                Collectors.groupingBy(
+                        Person::getCity,
+                        Collectors.mapping(Person::getName, Collectors.toList())
+                )
+        ).forEach((cityName, peopleNAmeList) -> {
+            System.out.println(cityName);
+            peopleNAmeList.forEach(System.out::println);
+        });
+
+
         System.out.println("-------------------------------------------------------------------");
 
         // 7- FlatMap Operation: Create a list of all unique cities where the people live.
@@ -119,7 +140,7 @@ public class StreamAPIUp {
         System.out.println("-------------------------------------------------------------------");
 
 
-        // 8 : Partitioning: Partition the list of people into two groups: one containing people older than 30 years
+        // 8-  Partitioning: Partition the list of people into two groups: one containing people older than 30 years
         //     and the other containing people younger than or equal to 30 years.
         Predicate<Person> condition = person -> person.getAge() > 30;
         Map<Boolean, List<Person>> partitioning30 = people.stream().collect(
@@ -139,12 +160,8 @@ public class StreamAPIUp {
 
         System.out.println("-------------------------------------------------------------------");
 
-        // 9 : Reducing Operation: Find the person with the longest name in the list
 
-
-        // 9 : Reducing Operation: Find the person with the longest name in the list
-
-
+        // 9-  Reducing Operation: Find the person with the longest name in the list
         Person oldestPerson = people.stream()
                 .collect(
                         Collectors.maxBy(Comparator.comparing(person -> person.getName().length())
@@ -160,7 +177,8 @@ public class StreamAPIUp {
 
         System.out.println("-------------------------------------------------------------------");
 
-        // 10- Advanced Filtering: Filter the list to find all people whose name contains the letter 'a', and then count the number of distinct cities they live in.
+        // 10- Advanced Filtering: Filter the list to find all people whose name contains the letter 'a',
+        // and then count the number of distinct cities they live in.
 
         // Filter the list to find all people whose name contains the letter 'a'
         List<Person> filteredPeopleList = people.stream()
