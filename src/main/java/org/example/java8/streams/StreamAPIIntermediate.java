@@ -170,7 +170,8 @@ public class StreamAPIIntermediate {
 
         System.out.println("-------------------------------------------------------------------");
 
-        // Sorting by age in ascending order, then by name in alphabetical order desc (reverse order)
+        // **
+        // 11- Sorting by age in ascending order, then by name in alphabetical order desc (reverse order)
         people.sort(
                 Comparator.comparingInt(Person::getAge)
                         .thenComparing(Comparator.comparing(Person::getName).reversed())
@@ -184,7 +185,7 @@ public class StreamAPIIntermediate {
 
 
         // **
-        // 11- Group all the people with city, and map it to average age of each city
+        // 12- Group all the people with city, and map it to average age of each city
         Map<String, Double> avgAgeByCity =
                 people.stream().collect(
                         Collectors.groupingBy(
@@ -200,7 +201,7 @@ public class StreamAPIIntermediate {
         System.out.println("-------------------------------------------------------------------");
 
         // **
-        // 12- Partition all the people depending on the condition which selects the person names that starts with "A"
+        // 13- Partition all the people depending on the condition which selects the person names that starts with "A"
         Map<Boolean, List<Person>> peopleNameStartsWith = people.stream().collect(Collectors.partitioningBy(o -> o.getName().startsWith("A")));
 
         List<Person> people1 = peopleNameStartsWith.get(true);
