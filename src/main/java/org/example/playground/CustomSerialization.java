@@ -1,6 +1,7 @@
 package org.example.playground;
 
 import java.io.*;
+import java.util.concurrent.*;
 
 public class CustomSerialization {
 
@@ -64,6 +65,31 @@ public class CustomSerialization {
             System.out.println("Deserialized Object: " + deserialized);
         }
 
+    }
+
+    public void testExecutorService(String[] args) {
+
+        try (ExecutorService executor = Executors.newFixedThreadPool(2)) {
+
+            Runnable task1 = () -> System.out.println("Task 1 executed by " + Thread.currentThread().getName());
+
+            Callable<Integer> task2 = () -> {
+                System.out.println("Task 2 executed by " + Thread.currentThread().getName());
+                return 42;
+            };
+
+            executor.execute(task1);
+            Future<Integer> future = executor.submit(task2);
+
+            try {
+                Integer result = future.get();
+                System.out.println("Result from task 2: " + result);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            executor.shutdown();
+        }
     }
 
 }
