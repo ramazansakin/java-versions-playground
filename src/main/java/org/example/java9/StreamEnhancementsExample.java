@@ -2,6 +2,7 @@ package org.example.java9;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 // 3. Stream API Enhancements
@@ -12,18 +13,18 @@ public class StreamEnhancementsExample {
         List<Integer> numbers = List.of(2, 4, 6, 8, 9, 10, 12);
         List<Integer> taken = numbers.stream()
                 .takeWhile(n -> n % 2 == 0)
-                .toList(); // [2, 4, 6, 8]
+                .collect(Collectors.toList()); // [2, 4, 6, 8]
         System.out.println("takeWhile: " + taken);
 
         // dropWhile() - drops elements while predicate is true
         List<Integer> dropped = numbers.stream()
                 .dropWhile(n -> n % 2 == 0)
-                .toList(); // [9, 10, 12]
+                .collect(Collectors.toList()); // [9, 10, 12]
         System.out.println("dropWhile: " + dropped);
 
         // iterate() with predicate
         List<Integer> iterateWithPredicate = Stream.iterate(1, n -> n <= 10, n -> n + 1)
-                .toList(); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                .collect(Collectors.toList()); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         System.out.println("iterate with predicate: " + iterateWithPredicate);
 
         // Stream.ofNullable
@@ -38,7 +39,7 @@ public class StreamEnhancementsExample {
         );
 
         // Optional.stream() - convert Optional to Stream
-        List<String> optionalToStream = optional.stream().toList(); // [value]
+        List<String> optionalToStream = optional.stream().collect(Collectors.toList()); // [value]
 
     }
 

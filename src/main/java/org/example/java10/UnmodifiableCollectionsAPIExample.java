@@ -1,9 +1,6 @@
 package org.example.java10;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 
 // 4. APIs for Creating Unmodifiable Collections

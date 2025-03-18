@@ -1,9 +1,16 @@
 package org.example.java9;
 
-import jdk.incubator.http.HttpClient;
-import jdk.incubator.http.HttpRequest;
-import jdk.incubator.http.HttpResponse;
+// Java-9
+//import jdk.incubator.http.HttpClient;
+//import jdk.incubator.http.HttpRequest;
+//import jdk.incubator.http.HttpResponse;
+
+// Java-11
 import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
 import java.util.concurrent.CompletableFuture;
 
 

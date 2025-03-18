@@ -17,8 +17,8 @@ public class Java12Features {
         String result = "  42  "
                 .transform(String::strip)
                 .transform(Integer::parseInt)
-                .transform(x -> x * 2)
                 .toString();
+
         System.out.println(result); // 84
     }
 
