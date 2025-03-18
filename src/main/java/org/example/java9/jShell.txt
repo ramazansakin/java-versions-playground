@@ -1,0 +1,30 @@
+
+7. JShell - Java REPL (Read-Eval-Print Loop)
+Run from command line: jshell
+Examples of what you can do in JShell:
+
+jshell> int x = 10
+x ==> 10
+//
+jshell> x + 20
+$2 ==> 30
+//
+jshell> String greeting = "Hello, Java 9!"
+greeting ==> "Hello, Java 9!"
+//
+jshell> greeting.length()
+$4 ==> 14
+//
+jshell> /imports
+|    java.io.*
+|    java.math.*
+|    java.net.*
+|    java.nio.file.*
+|    java.util.*
+|    java.util.concurrent.*
+|    java.util.function.*
+|    java.util.prefs.*
+|    java.util.regex.*
+|    java.util.stream.*
+//
+jshell> /exit

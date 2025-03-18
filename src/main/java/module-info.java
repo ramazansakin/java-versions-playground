@@ -3,8 +3,9 @@
 module com.example.myapp {
     requires java.logging;
     requires java.sql;
+    requires java.net.http;
     exports org.example.java8.streams;
-    provides org.example.TaskService with org.example.impl.TaskServiceImpl;
+    // provides org.example.TaskService with org.example.impl.TaskServiceImpl;
 }
 
 // Modularity, as it states that, it is useful for multi-module projects' dependency encapsulation & management
