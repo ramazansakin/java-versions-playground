@@ -1,8 +1,9 @@
 # Java Features Practice
 
-This repository contains exercises and sample code to practice various Java features, including Java 8, Java 9, and beyond. Each section provides descriptions of the features along with sample code and exercises to help you learn and master them.
+This repository contains exercises and sample code to practice various Java features, including Java 8 and beyond. Each section provides descriptions of the features along with sample code and exercises to help you learn and master them.
+JEP: JDK Enhancement Proposal
 
-## Java 8 Features
+## Java 8 Features - LTS
 
 - Functional Interfaces
 - Lambda Expressions
@@ -39,7 +40,7 @@ This repository contains exercises and sample code to practice various Java feat
 - Thread-Local Handshakes
 
 
-## Java 11 Features
+## Java 11 Features - LTS
 
 - String API Enhancements
 > - isBlank()
@@ -56,3 +57,50 @@ This repository contains exercises and sample code to practice various Java feat
 - Predicate.not Method
 - Epsilon: A No-Op Garbage Collector
 - ZGC: A Scalable Low-Latency Garbage Collector (Experimental)
+
+## Java 12 Features
+- Switch Expressions (Preview) (JEP 325) – switch can now be used as an expression.
+- Shenandoah GC (JEP 189) – Low-pause-time garbage collector.
+- Microbenchmark Suite (JEP 230) – Built-in benchmarking framework.
+- One AArch64 Port, Not Two (JEP 340) – Removed redundant ARM 64-bit ports.
+- Default CDS Archives (JEP 341) – Improves startup performance by archiving class metadata.
+- JVM Constants API (JEP 334) – API for modeling nominal descriptors of key class-file and runtime artifacts.
+
+
+## Java 13 Features
+- Text Blocks (Preview) (JEP 355) – Multi-line string literals using triple quotes (""").
+- Switch Expressions (2nd Preview) (JEP 354) – Enhancements to switch as an expression.
+- Reimplement Legacy Socket API (JEP 353) – Modernized networking stack.
+- Dynamic CDS Archives (JEP 350) – Enhances class data sharing.
+
+
+## Java 14 New Features
+Records (Preview) (JEP 359) – Immutable data classes with auto-generated methods.
+Pattern Matching for instanceof (Preview) (JEP 305) – Removes explicit casting after instanceof checks.
+Switch Expressions (Final) (JEP 361) – Finalized switch as an expression.
+Helpful NullPointerExceptions (JEP 358) – More detailed NullPointerException messages.
+JFR Event Streaming (JEP 349) – Continuous JDK Flight Recorder data streaming.
+Foreign-Memory Access API (Incubator) (JEP 370) – Efficient access to off-heap memory.
+Deprecate the Solaris and SPARC Ports (JEP 362) – Marked for removal.
+
+
+## Java 15 New Features
+- Sealed Classes (Preview) (JEP 360) – Restricting inheritance for classes/interfaces.
+- Text Blocks (Final) (JEP 378) – Officially added multi-line strings.
+- Hidden Classes (JEP 371) – Allows runtime-only classes for frameworks.
+- Pattern Matching for instanceof (2nd Preview) (JEP 375) – Extended pattern matching.
+- Foreign-Memory Access API (2nd Incubator) (JEP 383) – Improved off-heap memory access.
+- Deprecate RMI Activation (JEP 385) – Marked Remote Method Invocation (RMI) Activation for removal.
+- ZGC: A Scalable Low-Latency GC (JEP 377) – Z Garbage Collector became production-ready.
+
+
+## Java 16 New Features
+- Records (Final) (JEP 395) – Officially added immutable data classes.
+- Pattern Matching for instanceof (Final) (JEP 394) – Improved type checking.
+- Sealed Classes (2nd Preview) (JEP 397) – Further refinements to sealed classes.
+- Foreign Linker API (Incubator) (JEP 389) – Simplifies interaction with native code.
+- Strongly Encapsulate JDK Internals by Default (JEP 396) – Tightened restrictions on internal APIs.
+- Elastic Metaspace (JEP 387) – Reduced memory footprint.
+- Vector API (Incubator) (JEP 338) – Introduced SIMD operations for performance boosts.
+- Unix-Domain Socket Channels (JEP 380) – Supported inter-process communication.
+
