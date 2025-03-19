@@ -104,3 +104,16 @@ Deprecate the Solaris and SPARC Ports (JEP 362) – Marked for removal.
 - Vector API (Incubator) (JEP 338) – Introduced SIMD operations for performance boosts.
 - Unix-Domain Socket Channels (JEP 380) – Supported inter-process communication.
 
+
+## Java 17 Features - LTS
+- Sealed Classes (JEP 409) – Restricts which classes can extend a given class.
+- Pattern Matching for Switch (JEP 406) – Enables type-based pattern matching in switch statements.
+- New macOS Rendering Pipeline (JEP 382) – Uses Metal API for better graphics performance on macOS.
+- Strongly Encapsulated JDK Internals (JEP 403) – Blocks access to JDK internal APIs.
+- Foreign Function & Memory API (Incubator) (JEP 412) – Allows calling native code without JNI.
+- Text Blocks (Introduced in Java 13, but LTS in Java 17) – Supports multi-line string literals.
+- Records (JEP 395) – Provides immutable data carriers with auto-generated methods.
+- Deprecations & Removals:
+    - Security Manager removed (JEP 411)
+    - RMI Activation removed (JEP 407)
+    - Applets removed

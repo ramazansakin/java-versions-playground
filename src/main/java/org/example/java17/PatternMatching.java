@@ -15,13 +15,7 @@ class Order {
         switch (status) {
             case PENDING -> System.out.println("Order is pending, awaiting payment.");
             case COMPLETED -> System.out.println("Order completed successfully!");
-            case FAILED -> {
-                if (status instanceof PaymentStatus reason && reason == PaymentStatus.FAILED) {
-                    System.out.println("Order failed due to: " + reason);
-                } else {
-                    System.out.println("Order failed for unknown reason.");
-                }
-            }
+            case FAILED -> System.out.println("Order failed");
         }
     }
 }

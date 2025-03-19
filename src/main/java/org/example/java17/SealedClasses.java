@@ -45,6 +45,7 @@ final class SpreadsheetDocument extends Document {
 }
 
 public class SealedClasses {
+
     public static void main(String[] args) {
         Document textDoc = new TextDocument("MyTextFile", "This is some text content.");
         textDoc.print(); // Output: Printing document: Text Document: MyTextFile
