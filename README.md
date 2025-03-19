@@ -117,3 +117,12 @@ Deprecate the Solaris and SPARC Ports (JEP 362) – Marked for removal.
     - Security Manager removed (JEP 411)
     - RMI Activation removed (JEP 407)
     - Applets removed
+
+
+## Java 18 Features
+- Simple Web Server (JEP 408) – A lightweight built-in HTTP server for quick testing.
+- UTF-8 as Default Charset (JEP 400) – Ensures consistent text encoding across platforms.
+- Vector API (JEP 417 - Incubator) – Boosts performance for mathematical and data-intensive operations.
+- Foreign Function & Memory API (JEP 419 - Incubator) – Simplifies calling native libraries without JNI.
+- Deprecation of Finalization (JEP 421) – finalize() is now deprecated, favor try-with-resources instead.
+

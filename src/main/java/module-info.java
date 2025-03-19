@@ -4,6 +4,7 @@ module com.example.myapp {
     requires java.logging;
     requires java.sql;
     requires java.net.http;
+    requires jdk.httpserver;
     exports org.example.java8.streams;
     // provides org.example.TaskService with org.example.impl.TaskServiceImpl;
 }
