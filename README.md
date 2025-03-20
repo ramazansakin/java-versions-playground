@@ -134,3 +134,10 @@ Deprecate the Solaris and SPARC Ports (JEP 362) – Marked for removal.
 - Foreign Function & Memory API (JEP 424 - Incubator) – Enhances native interop without JNI.
 - Structured Concurrency (JEP 428 - Incubator) – Simplifies concurrent programming with better thread management.
 
+## Java 20 Features
+- Scoped Values (JEP 429 - Incubator) – A safer alternative to ThreadLocal.
+- Virtual Threads Improvements (JEP 436 - Second Preview) – More stable virtual threads for concurrency.
+- Record Patterns (JEP 432 - Second Preview) – Enhancements to pattern matching for records.
+- Pattern Matching for switch (JEP 433 - Fourth Preview) – More flexible and powerful switch.
+- Foreign Function & Memory API (JEP 434 - Third Incubator) – Further improvements in native interop.
+
