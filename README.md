@@ -141,3 +141,13 @@ Deprecate the Solaris and SPARC Ports (JEP 362) – Marked for removal.
 - Pattern Matching for switch (JEP 433 - Fourth Preview) – More flexible and powerful switch.
 - Foreign Function & Memory API (JEP 434 - Third Incubator) – Further improvements in native interop.
 
+## Java 21 Features
+- Virtual Threads (JEP 444 - Finalized) – Now fully stable for lightweight concurrency.
+- Pattern Matching for switch (JEP 441 - Finalized) – Fully supported and enhanced.
+- Record Patterns (JEP 440 - Finalized) – No longer in preview, ready for production.
+- Sequenced Collections (JEP 431 - New API) – A new interface for ordered data structures.
+- Scoped Values (JEP 446 - Preview) – A better replacement for ThreadLocal.
+  > - Virtual Threads & Scoped Values → 🚀 Biggest impact for concurrency!
+  > - Pattern Matching & Record Patterns → 🏆 Cleaner and more readable code!
+  > - Sequenced Collections → ✅ More predictable behavior for ordered collections!
+
