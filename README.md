@@ -126,3 +126,11 @@ Deprecate the Solaris and SPARC Ports (JEP 362) – Marked for removal.
 - Foreign Function & Memory API (JEP 419 - Incubator) – Simplifies calling native libraries without JNI.
 - Deprecation of Finalization (JEP 421) – finalize() is now deprecated, favor try-with-resources instead.
 
+
+## Java 19 Features
+- Virtual Threads (JEP 425 - Preview) – Lightweight, high-performance threads for better concurrency.
+- Pattern Matching for switch (JEP 405 - Preview) – More powerful switch statements with type matching.
+- Record Patterns (JEP 405 - Preview) – Enables pattern matching for records.
+- Foreign Function & Memory API (JEP 424 - Incubator) – Enhances native interop without JNI.
+- Structured Concurrency (JEP 428 - Incubator) – Simplifies concurrent programming with better thread management.
+
