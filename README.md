@@ -151,3 +151,10 @@ Deprecate the Solaris and SPARC Ports (JEP 362) – Marked for removal.
   > - Pattern Matching & Record Patterns → 🏆 Cleaner and more readable code!
   > - Sequenced Collections → ✅ More predictable behavior for ordered collections!
 
+## Java 22 Features
+- Scoped Values (Second Preview - JEP 429) – A safer alternative to ThreadLocal for sharing data within and across threads.
+- Stream Gatherers (Preview - JEP 461) – Simplifies collecting multiple streams of data efficiently.
+- Structured Concurrency (Second Preview - JEP 428) – Simplifies multithreaded programming by treating related tasks as a single unit of work.
+- Statements Before super() (Preview - JEP 447) – Allows statements before the constructor's super() call.
+- Unnamed Variables and Patterns (JEP 443) – Introduces unnamed variables and patterns to ignore parts of patterns.
+
