@@ -1,4 +1,4 @@
-# Java Features Practice
+# Java Features Playground
 
 This repository contains exercises and sample code to practice various Java features, including Java 8 and beyond. Each section provides descriptions of the features along with sample code and exercises to help you learn and master them.
 JEP: JDK Enhancement Proposal
