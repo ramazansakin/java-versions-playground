@@ -141,7 +141,7 @@ Deprecate the Solaris and SPARC Ports (JEP 362) – Marked for removal.
 - Pattern Matching for switch (JEP 433 - Fourth Preview) – More flexible and powerful switch.
 - Foreign Function & Memory API (JEP 434 - Third Incubator) – Further improvements in native interop.
 
-## Java 21 Features
+## Java 21 Features - LTS
 - Virtual Threads (JEP 444 - Finalized) – Now fully stable for lightweight concurrency.
 - Pattern Matching for switch (JEP 441 - Finalized) – Fully supported and enhanced.
 - Record Patterns (JEP 440 - Finalized) – No longer in preview, ready for production.
