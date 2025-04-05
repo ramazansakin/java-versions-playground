@@ -158,3 +158,18 @@ Deprecate the Solaris and SPARC Ports (JEP 362) – Marked for removal.
 - Statements Before super() (Preview - JEP 447) – Allows statements before the constructor's super() call.
 - Unnamed Variables and Patterns (JEP 443) – Introduces unnamed variables and patterns to ignore parts of patterns.
 
+## Java 23 Features
+
+- Primitive Types in Patterns, instanceof, and switch (Preview) – JEP 455
+- Markdown Documentation Comments – JEP 467
+- Module Import Declarations (Preview) – JEP 476
+- Implicitly Declared Classes and Instance Main Methods (Third Preview) – JEP 477
+- Scoped Values (Preview) – JEP 429
+
+## Java 24 Features
+
+- Generational Shenandoah Garbage Collector (Experimental) – JEP 404
+- Compact Object Headers (Experimental) – JEP 450
+- Stream Gatherers – JEP 485
+- Ahead-of-Time Class Loading & Linking – JEP 483
+- Quantum-Resistant Module-Lattice-Based Digital Signature Algorithm – JEP 497

@@ -40,9 +40,8 @@ public class StreamAPIUp {
         // 1- Filtering with Multiple Conditions: Filter the list to find all people who are older than 25 years and live in either "New York" or "Los Angeles".
         List<Person> filteredPeople =
                 people.stream()
-                        .filter(
-                                person -> person.getAge() > 25 &&
-                                        (person.getCity().equals("New York") || person.getCity().equals("Los Angeles")))
+                        .filter(person -> person.getAge() > 25)
+                        .filter(person -> person.getCity().equals("New York") || person.getCity().equals("Los Angeles"))
                         .toList();
 
         // Enhanced for-loop
@@ -68,8 +67,8 @@ public class StreamAPIUp {
 
         // 3-2 Alternative
         // Sorting using Comparator
-        Comparator<Person> cityComparator = Comparator.comparing(Person::getCity);  // Default asc
-        Comparator<Person> ageComparatorDesc = Comparator.comparing(Person::getAge).reversed();
+        Comparator<Person> cityComparator = Comparator.comparing(Person::getCity);  // Default ASC
+        Comparator<Person> ageComparatorDesc = Comparator.comparing(Person::getAge).reversed(); // DESC
 
         // !!! If Collections used like below, the actual list ll be sorted!!!
         // Sort first by city in ascending order, then by age in descending order within each city

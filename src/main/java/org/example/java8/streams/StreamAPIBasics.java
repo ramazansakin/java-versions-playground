@@ -1,7 +1,9 @@
 package org.example.java8.streams;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.StringJoiner;
 import java.util.function.IntBinaryOperator;
 import java.util.stream.Collectors;
@@ -22,15 +24,16 @@ public class StreamAPIBasics {
     public static void main(String[] args) {
 
         // Basic Stream Creation
-        IntStream.range(1, 10)
+        List<Integer> intList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        IntStream.range(1, 11)
                 .forEach((number) -> System.out.println(number));
 
         System.out.println("-------------------------------------------------------------------");
 
         // Filtering with Stream
-        Stream<String> stringStream = Stream.of("apple", "banana", "grape", "kiwi", "orange");
-        stringStream.filter(s -> s.length() >= 5)
-                .forEach(System.out::println);
+        Stream<String> fruits = Stream.of("apple", "banana", "grape", "kiwi", "orange");
+        fruits.filter(fruit -> fruit.length() >= 6)
+                .forEach(filteredFruit -> System.out.println(filteredFruit));
 
         System.out.println("-------------------------------------------------------------------");
 
