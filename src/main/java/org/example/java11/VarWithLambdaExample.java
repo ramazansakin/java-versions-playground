@@ -1,5 +1,8 @@
 package org.example.java11;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
@@ -19,6 +22,9 @@ public class VarWithLambdaExample {
         Stream.of("Java", "Kotlin", "Scala")
                 .map((@NonNull var s) -> s.toUpperCase())
                 .forEach(System.out::println);
+
+        var map = new HashMap<String, List<String>>();
+
     }
 
     // For demonstration only - this mimics the @NonNull annotation

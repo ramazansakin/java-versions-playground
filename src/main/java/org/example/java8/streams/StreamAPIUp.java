@@ -82,8 +82,8 @@ public class StreamAPIUp {
 
         // 4- Grouping and Counting: Group the list of people by their city, and then count the number of people in each city.
         people.stream()
-                .collect(Collectors.groupingBy(Person::getCity))
-                .forEach((city, peopleList) -> System.out.printf("%s -> %d\n", city, peopleList.size()));
+                .collect(Collectors.groupingBy(Person::getAge))
+                .forEach((age, peopleList) -> System.out.printf("%s -> %d\n", age, peopleList.size()));
 
 
         System.out.println("-------------------------------------------------------------------");

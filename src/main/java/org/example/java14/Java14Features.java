@@ -34,7 +34,6 @@ public class Java14Features {
 
         // 2. Records (Preview in Java 14)
         // Requires --enable-preview flag in Java 14
-        /*
         record Point(int x, int y) {
             // Compact constructor
             public Point {
@@ -53,7 +52,6 @@ public class Java14Features {
         System.out.println("Point: " + p);
         System.out.println("X coordinate: " + p.x());
         System.out.println("Distance from origin: " + p.distance());
-        */
 
         // 3. Pattern Matching for instanceof (Preview in Java 14)
         // Requires --enable-preview flag in Java 14
